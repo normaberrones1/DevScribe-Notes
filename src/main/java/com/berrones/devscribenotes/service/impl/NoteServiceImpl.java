@@ -8,12 +8,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class NoteServiceImpl implements NoteService {
 
     private final NoteRepository noteRepository;
-
 
     @Override
     public Note createNote(Note note) {
