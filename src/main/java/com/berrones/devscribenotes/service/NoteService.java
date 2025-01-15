@@ -1,17 +1,14 @@
 package com.berrones.devscribenotes.service;
 
+
 import com.berrones.devscribenotes.entity.Note;
-import com.berrones.devscribenotes.repository.jpa.NoteJpaRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
-@Service
-@RequiredArgsConstructor
-public class NoteService {
+import java.util.UUID;
 
-    private final NoteJpaRepository noteRepository;
+public interface NoteService {
 
-    public void createNote(Note note) {
-        noteRepository.save(note);
-    }
+    Note createNote (Note note);
+
+    Note findNoteById(UUID noteId);
+
 }

@@ -1,16 +1,14 @@
 package com.berrones.devscribenotes.repository;
 
 import com.berrones.devscribenotes.entity.Note;
-
-import java.util.ArrayList;
+import org.springframework.stereotype.Component;
 import java.util.UUID;
 
+@Component
 public interface NoteRepository {
 
-    Note findById(UUID noteId);
+    Note createNote (Note note);
 
-    Note save(Note note);
-
-    void deleteById(UUID noteId);
+    Note findNoteById(UUID noteId);
 
 }
