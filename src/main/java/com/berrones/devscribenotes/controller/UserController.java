@@ -1,7 +1,7 @@
 package com.berrones.devscribenotes.controller;
 
-import com.berrones.devscribenotes.entity.User;
-import com.berrones.devscribenotes.service.UserService;
+import com.berrones.devscribenotes.domain.entity.User;
+import com.berrones.devscribenotes.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import java.util.UUID;

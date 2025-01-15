@@ -1,8 +1,8 @@
-package com.berrones.devscribenotes.service.impl;
+package com.berrones.devscribenotes.adapters.serviceimpl;
 
-import com.berrones.devscribenotes.entity.Note;
-import com.berrones.devscribenotes.repository.NoteRepository;
-import com.berrones.devscribenotes.service.NoteService;
+import com.berrones.devscribenotes.domain.entity.Note;
+import com.berrones.devscribenotes.ports.NoteRepository;
+import com.berrones.devscribenotes.domain.service.NoteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

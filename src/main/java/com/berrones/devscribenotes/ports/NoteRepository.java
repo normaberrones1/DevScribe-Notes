@@ -1,6 +1,6 @@
-package com.berrones.devscribenotes.repository;
+package com.berrones.devscribenotes.ports;
 
-import com.berrones.devscribenotes.entity.Note;
+import com.berrones.devscribenotes.domain.entity.Note;
 import org.springframework.stereotype.Component;
 import java.util.UUID;
 

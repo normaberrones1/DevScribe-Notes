@@ -1,8 +1,8 @@
-package com.berrones.devscribenotes.service.impl;
+package com.berrones.devscribenotes.adapters.serviceimpl;
 
-import com.berrones.devscribenotes.entity.User;
-import com.berrones.devscribenotes.repository.UserRepository;
-import com.berrones.devscribenotes.service.UserService;
+import com.berrones.devscribenotes.domain.entity.User;
+import com.berrones.devscribenotes.ports.UserRepository;
+import com.berrones.devscribenotes.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.UUID;

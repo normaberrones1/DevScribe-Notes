@@ -1,6 +1,6 @@
-package com.berrones.devscribenotes.repository.jpa;
+package com.berrones.devscribenotes.adapters.jparepository;
 
-import com.berrones.devscribenotes.entity.User;
+import com.berrones.devscribenotes.domain.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

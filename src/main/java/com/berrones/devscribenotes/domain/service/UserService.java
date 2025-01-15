@@ -1,7 +1,7 @@
-package com.berrones.devscribenotes.service;
+package com.berrones.devscribenotes.domain.service;
 
 
-import com.berrones.devscribenotes.entity.User;
+import com.berrones.devscribenotes.domain.entity.User;
 
 import java.util.UUID;
 

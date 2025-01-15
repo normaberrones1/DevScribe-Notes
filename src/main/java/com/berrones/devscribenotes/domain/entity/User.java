@@ -1,4 +1,4 @@
-package com.berrones.devscribenotes.entity;
+package com.berrones.devscribenotes.domain.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,7 +19,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "user")
+@Table(name = "user_table")
 public class User {
 
     @Id

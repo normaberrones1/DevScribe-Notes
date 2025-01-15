@@ -1,8 +1,8 @@
-package com.berrones.devscribenotes.repository.impl;
+package com.berrones.devscribenotes.adapters.repositoryimpl;
 
-import com.berrones.devscribenotes.entity.User;
-import com.berrones.devscribenotes.repository.UserRepository;
-import com.berrones.devscribenotes.repository.jpa.UserJpaRepository;
+import com.berrones.devscribenotes.adapters.jparepository.UserJpaRepository;
+import com.berrones.devscribenotes.domain.entity.User;
+import com.berrones.devscribenotes.ports.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

@@ -1,8 +1,8 @@
-package com.berrones.devscribenotes.repository.impl;
+package com.berrones.devscribenotes.adapters.repositoryimpl;
 
-import com.berrones.devscribenotes.entity.Note;
-import com.berrones.devscribenotes.repository.NoteRepository;
-import com.berrones.devscribenotes.repository.jpa.NoteJpaRepository;
+import com.berrones.devscribenotes.adapters.jparepository.NoteJpaRepository;
+import com.berrones.devscribenotes.domain.entity.Note;
+import com.berrones.devscribenotes.ports.NoteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
