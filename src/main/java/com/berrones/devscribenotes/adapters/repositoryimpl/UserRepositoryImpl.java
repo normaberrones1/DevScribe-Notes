@@ -5,11 +5,12 @@ import com.berrones.devscribenotes.domain.entity.User;
 import com.berrones.devscribenotes.ports.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
 @RequiredArgsConstructor
-@Component
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 
     private final UserJpaRepository userJpaRepository;

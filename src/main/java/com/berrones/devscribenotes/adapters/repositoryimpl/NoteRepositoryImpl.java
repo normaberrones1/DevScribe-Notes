@@ -5,11 +5,12 @@ import com.berrones.devscribenotes.domain.entity.Note;
 import com.berrones.devscribenotes.ports.NoteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
 @RequiredArgsConstructor
-@Component
+@Repository
 public class NoteRepositoryImpl implements NoteRepository {
 
     private final NoteJpaRepository noteJpaRepository;
