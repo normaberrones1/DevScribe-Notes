@@ -1,4 +1,5 @@
 package com.berrones.devscribenotes.domain.entity;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +11,10 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.Date;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Entity
@@ -36,7 +40,13 @@ public class User {
     @Column(name = "user_email")
     private String userEmail;
 
+    @CreationTimestamp
     @Column(name = "created_at")
-    private Date createdAt;
+    private OffsetDateTime createdAt;
+
+    @Column(name = "updated_at")
+    @UpdateTimestamp
+    private OffsetDateTime updatedAt;
+
 
 }

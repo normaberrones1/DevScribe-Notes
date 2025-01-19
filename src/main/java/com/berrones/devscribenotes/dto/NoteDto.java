@@ -1,13 +1,19 @@
 package com.berrones.devscribenotes.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class NoteDto {
 
     private UUID noteId;
@@ -16,9 +22,9 @@ public class NoteDto {
 
     private String noteContent;
 
-    private Date createdDate;
+    private OffsetDateTime createdDate;
 
-    private Date updatedDate;
+    private OffsetDateTime updatedDate;
 
     private UUID userId;
 }

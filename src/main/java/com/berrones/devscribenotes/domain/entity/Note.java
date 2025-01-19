@@ -1,4 +1,5 @@
 package com.berrones.devscribenotes.domain.entity;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +13,10 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.Date;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Entity
@@ -35,11 +39,13 @@ public class Note {
     @Column(name = "note_content")
     private String noteContent;
 
+    @CreationTimestamp
     @Column(name = "created_date")
-    private Date createdDate;
+    private OffsetDateTime createdDate;
 
+    @UpdateTimestamp
     @Column(name = "updated_date")
-    private Date updatedDate;
+    private OffsetDateTime updatedDate;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
