@@ -1,41 +1,21 @@
-// import { createStore } from 'vuex';
-// import axios from 'axios';
+import { createStore as _createStore } from 'vuex';
+import axios from 'axios';
 
-// export default createStore({
-//     state: {
-//         items: [],
-//         loading: false,
-//         error: null
-//     },
+export function createStore(currentToken, currentUser){
+    let store = _createStore({
+        state: {
+            token: currentToken || '',
+            user: currentUser || {},
+        },
 
-//     mutations: {
-//         setItems(state, items) {
-//             state.items = items;
-//         },
-//         setLoading(state, loading) {
-//             state.loading = loading;
-//         },
-//         setError(state, error) {
-//             state.error = error;
-//         }
-//     },
-
-//     actions: {
-//         async fetchItems({ commit }) {
-//             commit('setLoading', true);
-//             try {
-//                 const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-//                 commit('setItems', response.data);
-//             } catch (error) {
-//                 commit('setError', error.message);
-//             }
-//             commit('setLoading', false);
-//         }
-//     },
-
-//     getters: {
-//         items: state => state.items,
-//         loading: state => state.loading,
-//         error: state => state.error
-//     }
-// });
+        mutations: {
+            SET_AUTH_TOKEN(state, token) {
+              state.token = token;
+              localStorage.setItem('token', token);
+              axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            }
+        }
+    });
+    
+    return store;
+}
