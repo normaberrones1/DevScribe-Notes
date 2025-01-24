@@ -1,16 +1,49 @@
-<script setup>
-import HomeView from './views/HomeView.vue'
-</script>
-
-
 <template>
+  <div id="notes-app">
+    <div id="nav">
+      <div class="nav-links">
+        <router-link to="/">Home</router-link>
 
-  <main>
-    <HomeView />
-  </main>
+        <!-- Set up store -->
+      
+        <router-link to="/notes">Notes</router-link>
+
+        <!-- Set up store -->
+
+        <router-link to="SharedNotes">Shared Notes</router-link>
+
+        <!-- Set up store -->
+
+        <router-link to="login">Log In</router-link>
+
+        <!-- Set up store -->
+
+        <router-link to="logout">Log Out</router-link>
+
+        <!-- Set up store -->
+
+        <router-link to="register">Register</router-link>
+
+        <!-- Set up store -->
+
+        <router-link to="profile">Profile</router-link>
+
+
+      </div>
+
+
+      
+
+    </div>
+  </div>
 </template>
 
+<script>
+export default {
 
-<style scoped>
+}
+</script>
+
+<style>
 
 </style>
