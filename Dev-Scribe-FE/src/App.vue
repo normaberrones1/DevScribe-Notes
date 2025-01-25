@@ -10,10 +10,6 @@
 
         <!-- Set up store -->
 
-        <router-link to="SharedNotes">Shared Notes</router-link>
-
-        <!-- Set up store -->
-
         <router-link to="login">Log In</router-link>
 
         <!-- Set up store -->
@@ -26,7 +22,6 @@
 
         <!-- Set up store -->
 
-        <router-link to="profile">Profile</router-link>
 
 
       </div>
