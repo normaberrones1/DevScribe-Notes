@@ -3,6 +3,7 @@
     <div id="nav">
       <div class="nav-links">
         <router-link to="/">Home</router-link>
+        
 
         <!-- Set up store -->
       
