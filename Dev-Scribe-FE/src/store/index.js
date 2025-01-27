@@ -13,8 +13,30 @@ export function createStore(currentToken, currentUser){
               state.token = token;
               localStorage.setItem('token', token);
               axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            },
+
+            SET_USER(state, user) {
+                state.user = user;
+            },
+
+            CLEAR_USER(state) {
+                state.user = {};
             }
-        }
+        },
+
+        actions: {
+            setAuthToken({commit}, token) {
+                commit('SET_AUTH_TOKEN', token);
+            },
+
+            setUser({commit}, user) {
+                commit('SET_USER', user);
+            },
+
+        getters: {
+
+        },
+    }
     });
     
     return store;

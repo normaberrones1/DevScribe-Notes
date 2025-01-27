@@ -1,6 +1,5 @@
 import { createRouter as createRouter, createWebHistory } from "vue-router";
 import { useStore} from "vuex";
-
 import HomeView from "./views/HomeView.vue";
 import LoginView from "./views/LoginView.vue";
 import RegisterView from "./views/RegisterView.vue";
@@ -10,8 +9,8 @@ import MyNotesView from "./views/MyNotesView.vue";
 const routes = [
 
     {
-        path: "/",
-        name: "home",
+        path: '/',
+        name: 'home',
         component: HomeView,
         meta: { 
             requiresAuth: true 
@@ -19,26 +18,26 @@ const routes = [
     },
 
     {
-        path: "/login",
-        name: "Login",
+        path: '/login',
+        name: 'Login',
         component: LoginView,
     },
 
     {
-        path: "/register",
-        name: "Register",
+        path: '/register',
+        name: 'Register',
         component: RegisterView,
     },
 
     {
-        path: "/logout",
-        name: "Logout",
+        path: '/logout',
+        name: 'Logout',
         component: LogoutView,
     },
 
     {
-        path: "/my-notes",
-        name: "MyNotes",
+        path: '/my-notes',
+        name: 'MyNotes',
         component: MyNotesView,
     }
 
@@ -52,8 +51,10 @@ const router = createRouter({
 router.beforeEach((to) => {
     const store = useStore();
 
+    const requiresAuth = to.matched.some(x => x.meta.requiresAuth);
+
     if (requiresAuth && !store.state.token) {
-        return { name: "Login" };
+        return { name: 'Login' };
     }
 });
 
