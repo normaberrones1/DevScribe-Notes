@@ -27,6 +27,7 @@ public class NoteServiceImpl implements NoteService {
         User user = userRepository.findUserById(note.getUserId());
         // Create a new note
         Note newNote = new Note();
+        // newNote.setNoteId(UUID.randomUUID());
         newNote.setNoteTitle(note.getNoteTitle());
         newNote.setNoteContent(note.getNoteContent());
         newNote.setUser(user);

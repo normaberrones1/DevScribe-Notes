@@ -51,5 +51,4 @@ public class Note {
     @JoinColumn(name = "user_id")
     private User user;
 
-
 }
