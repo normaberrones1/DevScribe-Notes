@@ -33,10 +33,17 @@ export function createStore(currentToken, currentUser){
                 commit('SET_USER', user);
             },
 
-        getters: {
-
         },
-    }
+
+        getters: {
+            isAuthenticated(state) {
+                return !!state.token;
+            },
+
+            user(state) {
+                return state.user;
+            },
+        }
     });
     
     return store;
