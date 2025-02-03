@@ -33,3 +33,4 @@ build/
 ### VS Code ###
 .vscode/
 !/script.sh
+!/harness-docker-runner-darwin-arm64
