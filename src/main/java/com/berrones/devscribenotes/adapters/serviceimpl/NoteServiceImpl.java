@@ -22,19 +22,14 @@ public class NoteServiceImpl implements NoteService {
     private final UserRepository userRepository;
 
     @Override
-    public NoteDto createNote(NoteDto note) {
-        // Find the user by the user ID
+   public NoteDto createNote(NoteDto note) {
         User user = userRepository.findUserById(note.getUserId());
-        // Create a new note
         Note newNote = new Note();
-        // newNote.setNoteId(UUID.randomUUID());
         newNote.setNoteTitle(note.getNoteTitle());
         newNote.setNoteContent(note.getNoteContent());
         newNote.setUser(user);
-        // Save the note
         Note savedNote = noteRepository.createNote(newNote);
         log.info("Note created: NoteID: {}, NoteEntity: {}", newNote.getNoteId(), newNote);
-        // Set Creation Date and Updated Date to Note DTO
         note.setNoteContent(savedNote.getNoteContent());
         note.setNoteTitle(savedNote.getNoteTitle());
         note.setUserId(savedNote.getUser().getUserId());
